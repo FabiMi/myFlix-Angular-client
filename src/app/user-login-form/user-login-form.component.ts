@@ -43,7 +43,7 @@ export class UserLoginFormComponent implements OnInit {
       next: (result) => {
         // Logic for a successful user login goes here! (To be implemented)
         //
-        
+        this.loading = false;
         this.dialogRef.close();
         localStorage.setItem("user", JSON.stringify(result.user));
         localStorage.setItem("token", result.token);
@@ -56,6 +56,7 @@ export class UserLoginFormComponent implements OnInit {
 
       },
       error: (result) => {
+        this.loading = false;
         console.log(result);
         this.snackBar.open(result, "OK", {
           duration: 2000,

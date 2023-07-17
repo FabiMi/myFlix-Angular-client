@@ -2,15 +2,17 @@ import { Component, OnInit, Inject  } from '@angular/core';
 import { MAT_DIALOG_DATA } from "@angular/material/dialog";
 
 
+
 @Component({
   selector: 'app-trailer',
   templateUrl: './trailer.component.html',
   styleUrls: ['./trailer.component.scss']
 })
 export class TrailerComponent {
-  movies: any = {};
+  movie: any = {};
+  innerWidth: any;
   constructor(@Inject(MAT_DIALOG_DATA) data: any) {
-    this.movies = data;
+    this.movie = data;
 
 }
 apiLoaded = false;
@@ -21,6 +23,7 @@ apiLoaded = false;
       tag.src = 'https://www.youtube.com/iframe_api';
       document.body.appendChild(tag);
       this.apiLoaded = true;
+      this.innerWidth = window.innerWidth;
     }
   }
 }
