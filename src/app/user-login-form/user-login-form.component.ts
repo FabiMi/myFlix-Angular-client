@@ -16,7 +16,7 @@ export class UserLoginFormComponent implements OnInit {
 
   // This is the default value for the input fields
   @Input() userData = { Username: '', Password: '' };
-
+  loading = false;
 
   constructor(
     public fetchApiData: FetchApiDataService,
@@ -28,6 +28,7 @@ export class UserLoginFormComponent implements OnInit {
 
   //ngOnInit is a lifecycle hook that runs when the component initializes. Its main purpose is to fetch the list of movies from the API.
   ngOnInit(): void {
+    
   }
 
   /**
@@ -37,16 +38,17 @@ export class UserLoginFormComponent implements OnInit {
     * @memberof UserLoginFormComponent
   * */
   loginUser(): void {
-
+    this.loading = true;
     this.fetchApiData.userLogin(this.userData).subscribe({
       next: (result) => {
         // Logic for a successful user login goes here! (To be implemented)
         //
+        
         this.dialogRef.close();
         localStorage.setItem("user", JSON.stringify(result.user));
         localStorage.setItem("token", result.token);
         console.log(result);
-
+       
         this.snackBar.open("User logged in successfully!", "OK", {
           duration: 2000,
         });

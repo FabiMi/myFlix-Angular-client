@@ -15,6 +15,7 @@ import { TrailerComponent } from '../trailer/trailer.component';
 })
 export class MovieCardComponent {
 movies: any[] = [];
+loading: boolean = true;
 constructor (
   public fetchApiData: FetchApiDataService,
   public dialog: MatDialog,
@@ -43,6 +44,7 @@ getMovies(): void {
       ...movie,
       imagePath: this.sanitizer.bypassSecurityTrustResourceUrl(movie.ImagePath),
     }));
+    this.loading = false;
     console.log(this.movies);
   });
 }
