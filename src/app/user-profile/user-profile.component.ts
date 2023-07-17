@@ -43,7 +43,7 @@ getProfile(): void {
   this.userData.Username = storedUser.Username;
   this.userData.Password = storedUser.Password;
   this.userData.Email = storedUser.Email;
-  this.userData.Birthday = storedUser.Birthday;
+  this.userData.Birthday = storedUser.Birthday.substring(0, 10);
   this.userData.FavMovies = storedUser.Fav_Movie;
 
     console.log(this.userData);
@@ -59,7 +59,7 @@ getProfile(): void {
   updateUser(): void {
     this.fetchApiData.editUser(this.userData).subscribe({
       next: (result) => {
-        localStorage.setItem("user", JSON.stringify(result.user));
+        localStorage.setItem("user", JSON.stringify(result));
         console.log(this.userData);
         this.snackBar.open("User successfully updated", "OK", {
           duration: 2000,
