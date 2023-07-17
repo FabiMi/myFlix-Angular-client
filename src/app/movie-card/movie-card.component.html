@@ -1,12 +1,9 @@
 <div style="display: flex;">
-    <div class="search" *ngIf="movies.length > 0">
+    <div class="search" *ngIf="movies.length >= 0">
         <input type="text" [(ngModel)]="titleFilter" (input)="applyFilter()" placeholder="Search by title">
       </div>
-       <div *ngIf="!loading && movies.length === 0">
-        No movies found.
-      </div>
+     
       <div *ngFor="let movie of movies" class="movie-card">
-        <!-- Movie card content here -->
       </div>
     <button [disabled]="!loading"  >
     <mat-progress-spinner color="warn" value="100" mode="indeterminate"></mat-progress-spinner>

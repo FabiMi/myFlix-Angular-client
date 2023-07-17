@@ -39,8 +39,10 @@ ngOnInit (): void {
 applyFilter(): void {
   if(this.titleFilter.trim() == "" || this.titleFilter.trim() == null) {
   this.getMovies();
+  this.loading = false;
    } else
   this.movies = this.movies.filter((movie: any) => movie.Title.toLowerCase().includes(this.titleFilter.toLowerCase()));
+  this.loading = false;
 }
 
 /**
