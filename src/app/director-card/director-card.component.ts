@@ -9,7 +9,7 @@ import { MatDividerModule } from '@angular/material/divider';
 })
 
 /**
- * This component renders the director card component.
+ * This component renders the director card component.oioiuoi
  */
 export class DirectorCardComponent {
   director: any = {};
