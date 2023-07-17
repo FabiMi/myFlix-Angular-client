@@ -47,7 +47,7 @@
             <button *ngIf="isFavorite(movie._id)" mat-icon-button (click)="removeFavorite(movie._id)">
                 <mat-icon >favorite</mat-icon>
                 </button>
-                <button class="trailer" (click)="openTrailerDialog(movie.Trailerpath)" mat-button color="white">  
+                <button class="trailer" (click)="openTrailerDialog(movie)" mat-button color="white">  
                     <mat-icon>play_circle_outline</mat-icon>
                 </button>
             
