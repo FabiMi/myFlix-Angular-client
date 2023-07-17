@@ -37,7 +37,7 @@ ngOnInit (): void {
  */
 
 applyFilter(): void {
-  if(this.titleFilter.trim() == "" && this.titleFilter.length > 0) {
+  if(this.titleFilter.trim() == "" || this.titleFilter.trim() == null) {
   this.getMovies();
    } else
   this.movies = this.movies.filter((movie: any) => movie.Title.toLowerCase().includes(this.titleFilter.toLowerCase()));
