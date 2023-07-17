@@ -14,6 +14,7 @@ import { TrailerComponent } from '../trailer/trailer.component';
   styleUrls: ['./movie-card.component.scss']
 })
 export class MovieCardComponent {
+  titleFilter: string = '';
 movies: any[] = [];
 loading: boolean = true;
 constructor (
@@ -27,6 +28,19 @@ constructor (
 ngOnInit (): void {
   this.getMovies();
 
+}
+
+/**
+ * @method applyFilter
+ * @description filters the movies by title
+ * @memberof MovieCardComponent
+ */
+
+applyFilter(): void {
+  if(this.titleFilter.trim() == "" && this.titleFilter.length > 0) {
+  this.getMovies();
+   } else
+  this.movies = this.movies.filter((movie: any) => movie.Title.toLowerCase().includes(this.titleFilter.toLowerCase()));
 }
 
 /**
@@ -48,6 +62,7 @@ getMovies(): void {
     console.log(this.movies);
   });
 }
+
 
 
 /**
