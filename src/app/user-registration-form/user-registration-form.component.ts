@@ -2,6 +2,7 @@ import { Component, OnInit, Input, } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { FetchApiDataService } from '../fetch-api-data.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { UserLoginFormComponent } from '../user-login-form/user-login-form.component';
 
 
 
@@ -40,7 +41,7 @@ export class UserRegistrationFormComponent implements OnInit {
 
         this.snackBar.open("User registered in successfully!", "OK", {
           duration: 2000,
-
+        
 
         });
       },
