@@ -26,4 +26,9 @@ apiLoaded = false;
       this.innerWidth = window.innerWidth;
     }
   }
+  adjustStyle(): void {
+const trailer_iframe: any = document.querySelector("youtube-player iframe");
+    trailer_iframe.style.maxWidth = "100%";
+  }
+
 }

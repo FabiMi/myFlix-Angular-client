@@ -1,23 +1,27 @@
 <div style="display: flex;">
     <div class="search" *ngIf="movies.length >= 0">
         <input type="text" [(ngModel)]="titleFilter" (input)="applyFilter()" placeholder="Search by title">
-      </div>
-     
-      <div *ngFor="let movie of movies" class="movie-card">
-      </div>
-    <button [disabled]="!loading"  >
-    <mat-progress-spinner color="warn" value="100" mode="indeterminate"></mat-progress-spinner>
-    </button>
-    <mat-card *ngFor="let movie of movies;" style="flex: 1 1 auto;">
+    </div>
+
+    <div *ngFor="let movie of movies" class="movie-card">
+    </div>
+
+    <mat-progress-spinner 
+    *ngIf="loading"
+    color="warn" 
+    value="100" 
+    mode="indeterminate"></mat-progress-spinner>
+    
+    <mat-card *ngFor="let movie of filteredMovies;" style="flex: 1 1 auto;">
         <mat-card-header>
             <mat-card-title></mat-card-title>
             <mat-card-subtitle></mat-card-subtitle>
-          
+
         </mat-card-header>
-        
-        
-        <img src={{movie.ImagePath}} alt={{movie.Title}}/>
-       
+
+
+        <img src={{movie.ImagePath}} alt={{movie.Title}} />
+
 
 
         <mat-expansion-panel hideToggle>
@@ -25,7 +29,7 @@
                 <mat-panel-title>
                     {{movie.Title}}
                 </mat-panel-title>
-            
+
             </mat-expansion-panel-header>
             <p> {{movie.Title}} {{movie.Description}}</p>
         </mat-expansion-panel>
@@ -39,15 +43,15 @@
                 Genre
             </button>
             <button *ngIf="!isFavorite(movie._id)" mat-icon-button (click)="addFavorite(movie._id)">
-            <mat-icon >favorite_border</mat-icon>
+                <mat-icon>favorite_border</mat-icon>
             </button>
             <button *ngIf="isFavorite(movie._id)" mat-icon-button (click)="removeFavorite(movie._id)">
-                <mat-icon >favorite</mat-icon>
-                </button>
-                <button class="trailer" (click)="openTrailerDialog(movie)" mat-button color="white">  
-                    <mat-icon>play_circle_outline</mat-icon>
-                </button>
-            
+                <mat-icon>favorite</mat-icon>
+            </button>
+            <button class="trailer" (click)="openTrailerDialog(movie)" mat-button color="white">
+                <mat-icon>play_circle_outline</mat-icon>
+            </button>
+
         </mat-card-actions>
     </mat-card>
 </div>
