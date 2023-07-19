@@ -5,12 +5,12 @@
     <mat-card-content>
         <form>
             <mat-form-field>
-                <input matInput [(ngModel)]="userData.Username" placeholder="{{user.Username}}" type="text" name="Username"
-                    required />
+                <input matInput [(ngModel)]="userData.Username" placeholder="{{user.Username}}" type="text"
+                    name="Username" required />
             </mat-form-field>
             <mat-form-field>
-                <input matInput [(ngModel)]="userData.Password" placeholder="please enter yout new Password" type="text" name="password"
-                    required />
+                <input matInput [(ngModel)]="userData.Password" placeholder="please enter yout new Password" type="text"
+                    name="password" required />
             </mat-form-field>
             <mat-form-field>
                 <input matInput [(ngModel)]="userData.Email" placeholder="Email" type="email" name="Email" required>
@@ -21,9 +21,9 @@
             </mat-form-field>
         </form>
         <mat-card-subtitle>Favorite Movies: <li *ngFor="let movie of favoriteMovies">
-            {{movie.name}}
-          </li></mat-card-subtitle>
-        
+                {{movie.name}}
+            </li></mat-card-subtitle>
+
     </mat-card-content>
     <mat-card-actions>
         <button mat-raised-button (click)="updateUser()" color="primary">EDIT USER</button>

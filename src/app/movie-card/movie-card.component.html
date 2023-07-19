@@ -6,12 +6,8 @@
     <div *ngFor="let movie of movies" class="movie-card">
     </div>
 
-    <mat-progress-spinner 
-    *ngIf="loading"
-    color="warn" 
-    value="100" 
-    mode="indeterminate"></mat-progress-spinner>
-    
+    <mat-progress-spinner *ngIf="loading" color="warn" value="100" mode="indeterminate"></mat-progress-spinner>
+
     <mat-card *ngFor="let movie of filteredMovies;" style="flex: 1 1 auto;">
         <mat-card-header>
             <mat-card-title></mat-card-title>

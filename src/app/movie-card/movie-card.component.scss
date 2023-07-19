@@ -7,10 +7,10 @@ mat-card {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     background-color: #000000;
     width: max-content
-    
 }
-.trailer{
-object-fit: initial;
+
+.trailer {
+    object-fit: initial;
 
 }
 
@@ -19,6 +19,7 @@ img {
     height: 100%;
     border-radius: 5px 5px 0 0;
 }
+
 img {
     width: 15rem;
     height: 100%;
@@ -38,14 +39,14 @@ html {
 }
 
 mat-expansion-panel {
-    position:absolute;
+    position: absolute;
     background-color: #000000;
     color: #ffffff;
-    
+
 
 }
 
-mat-panel-title{
+mat-panel-title {
     color: #ffffff;
     font-size: smaller;
     justify-content: center;
@@ -53,24 +54,23 @@ mat-panel-title{
 
 }
 
-mat-panel-description{
+mat-panel-description {
     color: #ffffff;
     font-size: smaller;
 }
 
-mat-expansion-panel-header{
-  height : max-content;
+mat-expansion-panel-header {
+    height: max-content;
 }
 
-mat-progress-spinner
-{
+mat-progress-spinner {
     top: 5rem;
     left: 50rem;
     position: absolute;
 }
 
-.search{
+.search {
     margin-top: 5rem;
     margin-left: 45%;
-    position: fixed; 
+    position: fixed;
 }
