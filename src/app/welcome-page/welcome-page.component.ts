@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class WelcomePageComponent {
 
-  constructor(public dialog: MatDialog, private router: Router) { 
+  constructor(public dialog: MatDialog, private router: Router) {
     if (localStorage.getItem('token')) {
       this.router.navigate(['movies']);
     }
