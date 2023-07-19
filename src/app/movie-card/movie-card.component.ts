@@ -5,9 +5,8 @@ import { GenreCardComponent } from '../genre-card/genre-card.component';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { DomSanitizer } from '@angular/platform-browser';
+
 import { TrailerComponent } from '../trailer/trailer.component';
-import { throwDialogContentAlreadyAttachedError } from '@angular/cdk/dialog';
 
 @Component({
   selector: 'app-movie-card',
@@ -23,8 +22,7 @@ export class MovieCardComponent {
     public fetchApiData: FetchApiDataService,
     public dialog: MatDialog,
     public router: Router,
-    public snackBar: MatSnackBar,
-    private sanitizer: DomSanitizer) { if (!localStorage.getItem("token")) this.router.navigate(['welcome']) }
+    public snackBar: MatSnackBar) { if (!localStorage.getItem("token")) this.router.navigate(['welcome']) }
 
 
   ngOnInit(): void {
@@ -42,6 +40,7 @@ export class MovieCardComponent {
     this.loading = true;
     this.filteredMovies = this.movies.filter((movie: any) => movie.Title.toLowerCase().includes(this.titleFilter.toLowerCase()));
     this.loading = false;
+    console.log(this.filteredMovies);
 
   }
 
