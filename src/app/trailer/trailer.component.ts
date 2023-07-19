@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject  } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from "@angular/material/dialog";
 
 
@@ -14,8 +14,8 @@ export class TrailerComponent {
   constructor(@Inject(MAT_DIALOG_DATA) data: any) {
     this.movie = data;
 
-}
-apiLoaded = false;
+  }
+  apiLoaded = false;
 
   ngOnInit() {
     if (!this.apiLoaded) {
@@ -27,7 +27,7 @@ apiLoaded = false;
     }
   }
   adjustStyle(): void {
-const trailer_iframe: any = document.querySelector("youtube-player iframe");
+    const trailer_iframe: any = document.querySelector("youtube-player iframe");
     trailer_iframe.style.maxWidth = "100%";
   }
 
