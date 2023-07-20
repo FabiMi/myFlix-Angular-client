@@ -53,7 +53,7 @@ getProfile(): void {
 
 /**
  * @description This method allows the user to edit their profile
- * @method editUser
+ * @method updateUser
  * @returns updated user profile
  */
   updateUser(): void {
@@ -92,6 +92,15 @@ getProfile(): void {
       },
     });
   }
+
+
+/**
+ * @description This method allows the user to remove a movie from their list of favorites
+ * @method getMovies
+ * @param id
+ * @param name
+ * @returns updated list of favorite movies
+ */
 
 
   getMovies(): void {
