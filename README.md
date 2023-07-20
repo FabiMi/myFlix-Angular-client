@@ -42,6 +42,53 @@ We understand the passion that movie enthusiasts have for their favorite films. 
 Enjoy exploring the world of movies with myFlix!
 
 
+## Installation Steps
+
+Clone the Repository:
+bash
+Copy code
+git clone <repository-url>
+cd my-flix-angular-client
+Install Dependencies:
+Copy code
+npm install
+Angular CLI Installation (If not already installed globally):
+css
+Copy code
+npm install -g @angular/cli@16.0.5
+Build the Application:
+Copy code
+ng build
+Run the Application Locally:
+Copy code
+ng serve
+The application will be accessible at http://localhost:4200/.
+Testing:
+
+To run tests, use the following command:
+
+bash
+Copy code
+ng test
+Deployment:
+
+To deploy the application, follow these steps:
+
+Build the Production Version:
+css
+Copy code
+ng build --configuration=production
+Deploy to GitHub Pages (optional - if required to host on GitHub Pages):
+bash
+Copy code
+npx angular-cli-ghpages --dir=dist/my-flix-angular-client
+Note: Ensure that you have the necessary access rights to the repository (if hosting on GitHub Pages).
+
+That's it! The "my-flix-angular-client" application should now be installed, built, and running locally. Additionally, you can deploy it to a web server or hosting platform of your choice.
+
+Remember to replace <repository-url> in step 1 with the actual URL of the repository if you haven't done so already. Also, make sure to update the Angular and other dependencies to their latest versions based on your project requirements.
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
 
 ## Development server
