@@ -58,7 +58,7 @@ export class UserLoginFormComponent implements OnInit {
       error: (result) => {
         this.loading = false;
         console.log(result);
-        this.snackBar.open(result, "OK", {
+        this.snackBar.open("Uups this didnt work, please try again", "OK", {
           duration: 2000,
         });
       },
