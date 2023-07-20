@@ -53,7 +53,6 @@ export class UserLoginFormComponent implements OnInit {
           duration: 2000,
         });
         this.router.navigate(['movies']);
-
       },
       error: (result) => {
         this.loading = false;
