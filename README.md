@@ -18,7 +18,7 @@ Welcome to the myFlix app, a platform designed for movie enthusiasts who love re
 Clone the Repository:
 bash
 Copy code
-git clone <repository-url>
+git clone <https://github.com/FabiMi/myFlix-Angular-client>
 cd my-flix-angular-client
 Install Dependencies:
 Copy code
