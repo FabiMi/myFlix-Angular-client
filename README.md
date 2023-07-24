@@ -5,7 +5,7 @@
 Welcome to the myFlix app, a platform designed for movie enthusiasts who love reading information about different movies. With myFlix, you can dive into the world of movies and discover new titles, while also having the ability to save your favorite films for future reference or to recommend to others.
 
 
-## [Demo Link](https://fabimi.github.io/myFlix-Angular-client/)
+## [Live Demo](https://fabimi.github.io/myFlix-Angular-client/)
 
 [![Watch the video](https://img.youtube.com/vi/nTQUwghvy5Q/default.jpg)](https://youtu.be/axPrFaC7MrI)
 
